@@ -7,6 +7,10 @@ import RoomDetails from './Pages/RoomDetails';
 import ContactPage from './Pages/ContactPage';
 import MyBookings from './Pages/MyBookings';
 import HotelReg from './components/HotelReg';
+import Layout from './Pages/HotelOwner.jsx/Layout';
+import DashBoard from './Pages/HotelOwner.jsx/DashBoard';
+import AddRoom from './Pages/HotelOwner.jsx/AddRoom';
+import ListRoom from './Pages/HotelOwner.jsx/ListRoom';
 
 
 
@@ -23,6 +27,12 @@ const App = () => {
           <Route path='/rooms/:id' element={<RoomDetails/>}/>
           <Route path='/contact' element={<ContactPage/>}/>
           <Route path='/my-bookings' element={<MyBookings/>}/>
+
+          <Route path='/owner' element={<Layout/>}>
+              <Route index element={<DashBoard/>}/>
+              <Route path='add-room' element={<AddRoom/>}/>
+              <Route path='list-room' element={<ListRoom/>}/>
+          </Route>
         </Routes>
       </div>
     </div>
