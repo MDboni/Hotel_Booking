@@ -2,7 +2,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import { clerkMiddleware } from '@clerk/express'
 import dotenv from 'dotenv';
-import clerkWebhooks from './controller/clerkWebhiiks';
+import clerkWebhooks from './controller/clerkWebhiiks.js';
 dotenv.config();
 
 const app = express();
